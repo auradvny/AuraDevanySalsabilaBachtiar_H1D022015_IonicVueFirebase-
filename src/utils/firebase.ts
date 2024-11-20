@@ -1,7 +1,8 @@
-// src/utils/firebase.ts
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
+// Konfigurasi Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCClHYEfPdEPU-f07Oai3YyKwla66Qj58w",
     authDomain: "vue-firebase-c0098.firebaseapp.com",
@@ -14,5 +15,6 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig);
 const auth = getAuth(firebase);
 const googleProvider = new GoogleAuthProvider();
+const db = getFirestore(firebase);
 
-export { auth, googleProvider };
+export { auth, googleProvider, db };
