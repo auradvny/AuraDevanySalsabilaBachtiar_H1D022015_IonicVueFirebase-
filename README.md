@@ -235,3 +235,5 @@ Shift Baru: Shift C
      - Feedback: Pengguna melihat toast yang menyatakan bahwa todo berhasil dihapus.
        
      - Tampilan Terbaru: Daftar todos diperbarui tanpa todo yang dihapus.
+
+## Build Ionic ke bentuk Apk
