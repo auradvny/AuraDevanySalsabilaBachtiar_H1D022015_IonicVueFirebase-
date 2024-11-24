@@ -237,3 +237,50 @@ Shift Baru: Shift C
      - Tampilan Terbaru: Daftar todos diperbarui tanpa todo yang dihapus.
 
 ## Build Ionic ke bentuk Apk
+
+![Lampiran Android](apk1.png)
+![Lampiran Aplikasi](apk2.png)
+
+1.  Install Android Studio untuk Menjalankan Emulator
+   
+    - Unduh Android Studio dari situs resmi Android Studio. Ikuti proses instalasi sesuai sistem operasi yang digunakan (Windows/Mac/Linux).
+     
+    - Buka Android Studio dan ikuti wizard konfigurasi awal: pilih SDK Android yang sesuai dan pilih lokasi penyimpanan SDK Android.
+     
+    - Buat Emulator: Buka AVD Manager di Android Studio melalui menu *Tools > Device Manager*. Klik Create Virtual Device. Pilih perangkat emulator (misalnya, Pixel 4) dan versi API Android yang kompatibel. Klik Finish untuk menyimpan emulator.
+     
+    - Jalankan Emulator: Pilih emulator yang sudah dibuat di AVD Manager. Klik tombol Run untuk memulai emulator.
+
+
+2. Ionic Build
+   
+   - Buka Terminal atau Command Prompt: Arahkan ke direktori proyek Ionic.
+     
+   - Jalankan Build Ionic: `ionic build`. Perintah ini akan menghasilkan file build untuk aplikasi Ionic.
+     
+3. Jalankan Perintah Berikut Sesuai Dokumentasi Capacitor
+   
+   - Install Capacitor Android Platform :  `npm install @capacitor/android`. Perintah ini akan menambahkan dukungan platform Android pada proyek.
+     
+   - Tambahkan Android ke Proyek Ionic : `npx cap add android`. Ini akan membuat folder android di dalam proyek.
+     
+   - Buka Proyek Android di Android Studio : `npx cap open android`. Perintah ini akan membuka proyek Android di Android Studio.
+  
+4. Bangun APK di Android Studio
+   
+   - Buka Android Studio: Pastikan folder `android` yang dihasilkan oleh Capacitor terbuka di Android Studio.
+     
+   - Bangun APK: Pilih menu *Build > Build Bundle(s)/APK(s) > Build APK(s)*. Tunggu hingga proses build selesai. APK hasil build akan tersimpan di folder *android/app/build/outputs/apk/debug*.
+
+5. Jalankan Aplikasi di Emulator
+   
+   - Temukan File APK: Buka direktori *android/app/build/outputs/apk/debug*. Temukan file bernama `app-debug.apk`.
+     
+   - Install APK di Emulator: Buka file `app-debug.apk` ke emulator yang sedang berjalan. APK akan terinstal secara otomatis.
+  
+6. Verifikasi Aplikasi di Emulator
+   
+   - Buka Aplikasi: Temukan ikon aplikasi Anda di layar emulator. Klik untuk membuka aplikasi.
+     
+   - Tes Fungsi Aplikasi: Pastikan aplikasi berjalan seperti yang diharapkan di emulator.
+     
